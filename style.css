@@ -1,0 +1,92 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffdd0; /* Cream yellow background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height viewport */
+    text-align: center; /* Center text */
+}
+
+/* Welcome container styles */
+.welcome-container {
+    background-color: #fff; /* White background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Heading styles */
+.welcome-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.highlight {
+    color: #007bff; /* Highlight color */
+    font-weight: bold;
+}
+
+/* Paragraph styles */
+.welcome-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Button group styles */
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Button styles */
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+.logo {
+    background-image: url("images/logo.jpg");
+}
+
