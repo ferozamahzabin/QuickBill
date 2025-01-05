@@ -1,0 +1,46 @@
+CREATE DATABASE quickbill;
+
+USE quickbill;
+
+-- Student Table
+CREATE TABLE students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    grade VARCHAR(10),
+    contact_number VARCHAR(15),
+    parent_email VARCHAR(100)
+);
+
+-- Food Items Table
+CREATE TABLE food_items (
+    food_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL
+);
+
+-- Orders Table
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    order_date DATE,
+    total_price DECIMAL(10, 2),
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
+-- Weekly Bills Table
+CREATE TABLE bills (
+    bill_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    week INT,
+    total_amount DECIMAL(10, 2),
+    sent_date DATE,
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
+CREATE TABLE Order_Items (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    food_name VARCHAR(100),
+    price DECIMAL(10, 2),
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+);
